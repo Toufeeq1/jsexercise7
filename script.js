@@ -15,11 +15,15 @@
  */
 let multiply = (num1, num2, num3) => num1 * num2 * num3;
 
+multiply(1,2,3)
+
 /**
  * @param {number} minutes
  * @return {number}
  */
 let convertToSeconds = (minutes) => minutes * 60;
+
+console.log(convertToSeconds(1))
 
 /**
  * @param {number} temperature
@@ -27,12 +31,15 @@ let convertToSeconds = (minutes) => minutes * 60;
  */
 let fahrenheitToCelsius = (temperature) => (temperature - 32) * (5 / 9);
 
+console.log(fahrenheitToCelsius(100))
+
 /**
  * @param {string} strings
  * @return {string}
  */
 let reverseString = (strings) => strings.split("").reverse().join("");
 
+console.log(reverseString("Javascript"))
 
 /**
  * @param {string} string
@@ -50,16 +57,22 @@ let countVowels = (string) => {
     return count
 };
 
+console.log(countVowels("Javascript"))
+
 
 /**
  * @param {number} number
  * @return {boolean}
  */
 let isPrime = (number) => {
-    for (let i = 2; i < number; i++){
-        if (number % i === 0){
-            return false
+    if (number <= 1) return false;
+
+    for (let i = 2; i < number; i++) {
+        if (number % i === 0) {
+            return false;
         }
     }
-    return true
+    return true;
 };
+
+console.log(isPrime(1))
